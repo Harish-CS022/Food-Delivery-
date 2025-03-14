@@ -1,0 +1,59 @@
+:root{
+    --PRIMARY-COLOR: #F4ECE1;
+}
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0px;
+}
+
+body{
+    background-color:var(--PRIMARY-COLOR) ;
+    padding: 0 50px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* FLEX PROPERTIES */
+.flex{
+    display: flex;
+}
+
+/* HEADER-SECTION */
+a{
+    text-decoration: none;
+}
+
+.navigation_component{
+    height: 100px;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.branding_section{
+    width:30%;
+    column-gap: 10px;
+    img{
+        width: 30px;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+.navigation_section{
+    width:70%;
+
+    >.navs{
+        width: 70%;
+        >ul{
+            column-gap: 30px;
+            list-style-type: none;
+        }
+    }
+    >.search{
+        width: 30%;
+    }
+}
