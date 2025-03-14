@@ -1,5 +1,8 @@
 :root{
-    --PRIMARY-COLOR: #F4ECE1;
+    --BG-LIGHT: #F4ECE1;
+    --BG-PRIMARY: #FF7E00;
+    --BG-DARK: #000000;
+    --BG-SECONDARY: #2F2F2F;
 }
 
 html,body{
@@ -12,8 +15,12 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 body{
-    background-color:var(--PRIMARY-COLOR) ;
-    padding: 0 50px;
+    background-color:var(--BG-LIGHT) ;
+    padding: 0 100px;
+    font-family: "Poppins", sans-serif;
+}
+
+button{
     font-family: "Poppins", sans-serif;
 }
 
@@ -22,12 +29,46 @@ body{
     display: flex;
 }
 
-/* HEADER-SECTION */
-a{
-    text-decoration: none;
+/* MARGIN */
+
+.mb-10{
+    margin-bottom: 10px;
 }
 
-.navigation_component{
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.f-d-col{
+    flex-direction: column;
+}
+
+.justify-center{
+    justify-content: center;
+}
+.align_center{
+    align-items: center;
+}
+
+/* HEADER-SECTION */
+.navigation-component{
     height: 100px;
     padding: 20px 0;
     box-sizing: border-box;
@@ -55,5 +96,70 @@ a{
     }
     >.search{
         width: 30%;
+    }
+}
+
+/* HERO_SECTION */
+.primary-text{
+    color: var(--BG-PRIMARY);
+}
+.hero-section{
+    height: calc(100vh - 100px);
+    >.content_section{
+        width: 50%;
+        >.top-section{
+            >h2{
+                font-size: 4rem;
+            }
+            p{
+                font-size: 2rem;
+                line-height: 30px;
+                font-weight: bold;
+            }
+        }
+    }
+    >.image_section{
+        width: 50%;
+        background-image: url('./Assets/heroimage.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+/* CTA */
+.cta1{
+    height: 50px;
+    width: 150px;
+    background-color: var(--BG-SECONDARY);
+    border-radius: 25px;
+    color: var(--BG-LIGHT);
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 55px;
+}
+
+.cta2{
+    width: auto;
+    column-gap: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    img{
+        height: 50px;
+    }
+}
+
+.cta-container{
+    column-gap: 20px;
+}
+
+.ratings_container{
+    h4{
+        font-size: 1.2rem;
+    }
+    p{
+        font: 1rem;
+        color: var(--BG-SECONDARY);
+
     }
 }
